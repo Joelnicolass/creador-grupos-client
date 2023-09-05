@@ -3,20 +3,22 @@ import toast from "react-hot-toast";
 import useSWR from "swr";
 import { FaUser } from "react-icons/fa";
 
+const URL_BASE_API = "https://creador-grupos-sv-production.up.railway.app";
+
 const getAllStudents = async () => {
-  const response = await fetch("http://localhost:2001/students");
+  const response = await fetch(URL_BASE_API);
   const data = await response.json();
   return data;
 };
 
 const getAllGroups = async () => {
-  const response = await fetch("http://localhost:2001/groups");
+  const response = await fetch(URL_BASE_API);
   const data = await response.json();
   return data;
 };
 
 const createGroup = async (members) => {
-  const response = await fetch("http://localhost:2001/groups", {
+  const response = await fetch(URL_BASE_API, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
