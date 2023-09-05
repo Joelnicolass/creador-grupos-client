@@ -6,25 +6,29 @@ import { FaUser } from "react-icons/fa";
 const URL_BASE_API = "https://creador-grupos-sv-production.up.railway.app";
 
 const getAllStudents = async () => {
-  const response = await fetch(URL_BASE_API);
+  const response = await fetch(`${URL_BASE_API}/students`);
   const data = await response.json();
   return data;
 };
 
 const getAllGroups = async () => {
-  const response = await fetch(URL_BASE_API);
+  const response = await fetch(`${URL_BASE_API}/groups`);
   const data = await response.json();
   return data;
 };
 
 const createGroup = async (members) => {
-  const response = await fetch(URL_BASE_API, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ members }),
-  });
+  const response = await fetch(
+    `${URL_BASE_API}/groups
+  `,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ members }),
+    }
+  );
   const data = await response.json();
   return data;
 };
