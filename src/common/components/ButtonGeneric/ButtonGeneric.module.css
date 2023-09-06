@@ -1,0 +1,8 @@
+.button_generic {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #d466ff;
+  background: linear-gradient(to right, #d466ff, #7b6fff);
+  width: 100%;
+  cursor: pointer;
+}

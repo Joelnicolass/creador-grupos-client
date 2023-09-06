@@ -1,0 +1,12 @@
+.container_list {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 400px;
+  max-height: 400px;
+  overflow: scroll;
+  border: 1px solid #d466ff;
+  border-radius: 20px;
+  width: 100%;
+}
